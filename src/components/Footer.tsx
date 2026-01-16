@@ -19,11 +19,11 @@ const Footer = () => {
             <h4 className="text-xl font-display text-foreground mb-4">Contact</h4>
             <div className="space-y-3">
               <a 
-                href="tel:+33600000000" 
+                href="tel:+22100000000" 
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-5 h-5 text-primary" />
-                +33 6 00 00 00 00
+                +221 00 00 00 00
               </a>
               <a 
                 href="mailto:contact@autoprestige.com" 
@@ -34,7 +34,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                Paris, France
+                Dakar, Senegal
               </div>
             </div>
           </div>
