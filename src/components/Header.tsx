@@ -12,9 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <span className="text-3xl font-display text-gradient tracking-wider">
-              AUMOCA
-            </span>
+            <img src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1768523947/AUMOCA_ykqmoq.png" alt="" />
           </Link>
 
           {/* Desktop Navigation */}
