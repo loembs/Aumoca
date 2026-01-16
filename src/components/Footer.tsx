@@ -1,6 +1,18 @@
-import { MapPin, Phone, Mail, Instagram, Facebook } from "lucide-react";
+import { useState, useEffect } from "react";
+import { MapPin, Phone, Mail, Instagram, Facebook, ArrowUp } from "lucide-react";
 
 const Footer = () => {
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <footer id="contact" className="bg-card border-t border-border py-16">
       <div className="container mx-auto px-4">
@@ -60,10 +72,19 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-border text-center">
+        <div className="mt-12 pt-8 border-t border-border text-center relative">
           <p className="text-muted-foreground text-sm">
             © {new Date().getFullYear()} AUMOCA. Tous droits réservés.
           </p>
+          {showScrollTop && (
+            <button
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gradient-gold text-primary-foreground p-2 rounded-full hover:opacity-90 transition-opacity"
+              aria-label="Retour en haut"
+            >
+              <ArrowUp className="w-5 h-5" />
+            </button>
+          )}
         </div>
       </div>
     </footer>

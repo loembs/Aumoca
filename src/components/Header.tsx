@@ -12,7 +12,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <img src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1768523947/AUMOCA_ykqmoq.png" alt="" />
+            <img src="https://res.cloudinary.com/dlna2kuo1/image/upload/v1768523947/AUMOCA_ykqmoq.png" alt="" className="w-12 h-12" />
           </Link>
 
           {/* Desktop Navigation */}
